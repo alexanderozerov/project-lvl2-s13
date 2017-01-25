@@ -1,0 +1,43 @@
+{
+  "name": "alex_hexlet_gendiff",
+  "version": "0.0.1",
+  "description": "Hexlet gendiff project",
+  "bin": {
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel-node": "babel-node",
+    "flow": "flow",
+    "flow-typed": "flow-typed",
+    "eslint": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexanderozerov/project-lvl2-s13.git"
+  },
+  "author": "Alexander Ozerov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexanderozerov/project-lvl2-s13/issues"
+  },
+  "homepage": "https://github.com/alexanderozerov/project-lvl2-s13#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-preset-env": "*",
+    "babel-preset-stage-0": "*",
+    "babel-plugin-syntax-flow": "*",
+    "babel-plugin-transform-flow-strip-types": "*",
+    "flow-bin": "*",
+    "flow-typed": "*",
+    "eslint": "*",
+    "eslint-config-airbnb": "*",
+    "eslint-plugin-flowtype": "*",
+    "eslint-plugin-import": "*",
+    "babel-eslint": "*",
+    "eslint-plugin-jsx-a11y": "*",
+    "eslint-plugin-react": "*"
+  }
+}
