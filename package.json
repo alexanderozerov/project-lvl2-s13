@@ -1,12 +1,12 @@
 {
-  "name": "alex_hexlet_gendiff",
-  "version": "0.0.1",
+  "name": "hexlet_gendiff",
+  "version": "0.1.1",
   "description": "Hexlet gendiff project",
   "bin": {
     "gendiff": "./dist/bin/gendiff.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "babel-node": "babel-node",
     "build": "NODE_ENV=production babel src --out-dir dist",
     "prepublish": "npm run build",
@@ -46,6 +46,7 @@
     "eslint-plugin-flowtype": "^2.29.2",
     "eslint-plugin-import": "^2.2.0",
     "flow-bin": "^0.37",
-    "flow-typed": "^2.0.0"
+    "flow-typed": "^2.0.0",
+    "jest": "*"
   }
 }
