@@ -1,9 +1,10 @@
 ---
 
-plugins: [flowtype]
+# plugins: [flowtype]
 
 env:
   node: true
+  jest: true
 
 parser: babel-eslint
 
@@ -12,7 +13,7 @@ parserOptions:
   sourceType: module
 
 extends:
-  - 'airbnb/base'
+  - 'airbnb-base'
   - plugin:import/errors
   - plugin:import/warnings
 
