@@ -16,7 +16,7 @@ test('JSON #1', () => {
   expect(compare(path1, path2)).toBe(expected);
 });
 
-test('YAML #!', () => {
+test('YAML #1', () => {
   const expected = '{' +
     '\n    host: hexlet.io' +
     '\n  + timeout: 20' +
@@ -27,5 +27,19 @@ test('YAML #!', () => {
 
   const path1 = '__test__/__fixtures__/before.yaml';
   const path2 = '__test__/__fixtures__/after.yaml';
+  expect(compare(path1, path2)).toBe(expected);
+});
+
+test('INI #1', () => {
+  const expected = '{' +
+    '\n    host: hexlet.io' +
+    '\n  + timeout: 20' +
+    '\n  - timeout: 50' +
+    '\n  - proxy: 123.234.53.22' +
+    '\n  + verbose: true' +
+    '\n}';
+
+  const path1 = '__test__/__fixtures__/before.ini';
+  const path2 = '__test__/__fixtures__/after.ini';
   expect(compare(path1, path2)).toBe(expected);
 });

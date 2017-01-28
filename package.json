@@ -1,6 +1,6 @@
 {
   "name": "hexlet_gendiff",
-  "version": "0.1.1",
+  "version": "0.3.1",
   "description": "Hexlet gendiff project",
   "bin": {
     "gendiff": "./dist/bin/gendiff.js"
@@ -28,7 +28,8 @@
   "dependencies": {
     "commander": "*",
     "lodash": "*",
-    "yaml-js": "*"
+    "yaml-js": "*",
+    "ini": "*"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
