@@ -2,6 +2,7 @@
 
 import fs from 'fs';
 import _ from 'lodash';
+import parser from './parser';
 
 const getDiff = (obj1, obj2) => {
   const keys = _.union(Object.keys(obj1), Object.keys(obj2));
@@ -18,9 +19,11 @@ const getDiff = (obj1, obj2) => {
   return `{${str.join('')}\n}`;
 };
 
+const getExt = path => path.split('.').pop();
+
 const compare = (path1: string, path2: string) => {
-  const obj1 = JSON.parse(fs.readFileSync(path1, 'utf8'));
-  const obj2 = JSON.parse(fs.readFileSync(path2, 'utf8'));
+  const obj1 = parser(fs.readFileSync(path1, 'utf8'), getExt(path1));
+  const obj2 = parser(fs.readFileSync(path2, 'utf8'), getExt(path2));
   return getDiff(obj1, obj2);
 };
 
