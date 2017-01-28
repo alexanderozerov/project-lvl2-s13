@@ -2,17 +2,10 @@
 
 import compare from '../src/lib';
 
-const expected = `{
-    host: hexlet.io
-  + timeout: 20
-  - timeout: 50
-  - proxy: 123.234.53.22
-  + verbose: true
-}`;
+test('JSON #1', () => {
+  const expected = `{\n    host: hexlet.io\n  + timeout: 20\n  - timeout: 50\n  - proxy: 123.234.53.22\n  + verbose: true\n}`;
 
-const path1 = '__test__/__fixtures__/before.json';
-const path2 = '__test__/__fixtures__/after.json';
-
-test('gendiff', () => {
+  const path1 = '__test__/__fixtures__/before.json';
+  const path2 = '__test__/__fixtures__/after.json';
   expect(compare(path1, path2)).toBe(expected);
 });

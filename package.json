@@ -26,7 +26,8 @@
   },
   "homepage": "https://github.com/alexanderozerov/project-lvl2-s13#readme",
   "dependencies": {
-    "commander": "*"
+    "commander": "*",
+    "lodash": "*"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
