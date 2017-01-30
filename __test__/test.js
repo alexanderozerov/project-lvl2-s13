@@ -97,3 +97,17 @@ test('INI #1', () => {
   const path2 = '__test__/__fixtures__/after.ini';
   expect(compare(path1, path2)).toBe(expected);
 });
+
+test('PlAIN TEXT', () => {
+  const expected = 'Property \'common.setting2\' was removed\n' +
+    'Property \'common.setting6\' was removed\n' +
+    'Property \'common.setting4\' was added with value: blah blah\n' +
+    'Property \'common.setting5\' was added with complex value\n' +
+    'Property \'group1.baz\' was updated. From \'bas\' to \'bars\'\n' +
+    'Property \'group2\' was removed\n' +
+    'Property \'group3\' was added with complex value\n';
+
+  const path1 = '__test__/__fixtures__/before.json';
+  const path2 = '__test__/__fixtures__/after.json';
+  expect(compare(path1, path2, 'plain')).toBe(expected);
+});

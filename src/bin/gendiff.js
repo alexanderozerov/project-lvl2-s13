@@ -10,6 +10,6 @@ program
   .option('-f, --format [type]', 'Output format')
   .arguments('<first_config> <second_config>')
   .action((first_config, second_config) => {
-    console.log(compare(first_config, second_config));
+    console.log(compare(first_config, second_config, program.format));
   })
   .parse(process.argv);
