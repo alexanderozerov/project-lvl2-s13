@@ -2,7 +2,10 @@
 
 import _ from 'lodash';
 
-const isComplex = value => _.isObject(value) ? 'complex value' : `value: ${value}`;
+const isComplex = (value) => {
+  const result = _.isObject(value) ? 'complex value' : `value: ${value}`;
+  return result;
+};
 
 const toStr = (ast: [], prefix: string = '') => {
   const pattern = {
