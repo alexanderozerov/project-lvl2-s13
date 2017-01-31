@@ -3,7 +3,7 @@
 import fs from 'fs';
 import _ from 'lodash';
 import parser from './parser';
-import print from './printers/print';
+import print from './printers';
 
 const getDiff = (obj1, obj2) => {
   const keys = _.union(Object.keys(obj1), Object.keys(obj2));
@@ -15,7 +15,7 @@ const getDiff = (obj1, obj2) => {
     } else if (_.isObject(obj1[key])) {
       return { type: 'nested', name: key, value: getDiff(obj1[key], obj2[key]) };
     } else if (obj1[key] !== obj2[key]) {
-      return { type: 'changed', name: key, value: [obj2[key], obj1[key]] };
+      return { type: 'changed', name: key, value: obj2[key], oldValue: obj1[key] };
     }
     return { type: 'unchanged', name: key, value: obj1[key] };
   });
